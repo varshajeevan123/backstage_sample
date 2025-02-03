@@ -1,0 +1,62 @@
+method: POST
+url: 'https://kfpwszxuivydjftikxts.supabase.co/rest/v1/rpc/get_questions_of_quiz'
+headers:
+  Content-Type: 'application/json'
+  apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmcHdzenh1aXZ5ZGpmdGlreHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA1ODM3ODEsImV4cCI6MTk5NjE1OTc4MX0.YSTLSPdTd9PCJbI8z803SR0gAsAfsUdLwmVWiVz6I0o'
+  Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ii9tYzQ1MjJHZHpQSjMvdm4iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tmcHdzenh1aXZ5ZGpmdGlreHRzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIzMzQ0ZTc0OC05N2M5LTQ2Y2QtYjJmNy1iMzE0OTQ5YWE2NzQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzM4NTg4MjkxLCJpYXQiOjE3Mzg1ODQ2OTEsImVtYWlsIjoidmp0ZWNoczAwN0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidmp0ZWNoczAwN0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcnN0X25hbWUiOiJWYXJzaGFTdHVkZW50IiwibGFzdF9uYW1lIjoiU3R1ZGVudCIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGhvbmVudW1iZXIxIjoiKzkxIDk4NzQ1NjMyMTAiLCJzdWIiOiIzMzQ0ZTc0OC05N2M5LTQ2Y2QtYjJmNy1iMzE0OTQ5YWE2NzQifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTczODU4NDY5MX1dLCJzZXNzaW9uX2lkIjoiYmRjZTMxYWUtNGQwNy00MzUwLTg3NDEtM2RlMGE1YjI3MmZlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.0VTCLfulmai6D2RTK2elCM2mUEQPBm0Ie3D4r3XraTM'
+data:
+  quiz_id: "88e6453a-0d70-4bfc-af9f-68cc78de3976"
+response:
+  # Here, the response will depend on the quiz_id and the data in the database.
+  # This is just an example of what could be returned dynamically.
+  - name: 'VaysageTestEqWeightage'
+    duration: 30
+    end_time: '2024-10-24T10:00:00+00:00'
+    course_id: 'd01cb44c-3352-4c84-890d-7055cde2da31'
+    pass_mark: 1
+    quiz_type: 'Main'
+    main_topic: 'cdf6c9e3-a5a4-4af3-9468-39b9395bc1f3'
+    section_id: '444dcbc2-2c71-4244-86d0-441de57d6409'
+    start_time: '2024-05-17T09:50:00+00:00'
+    total_mark: 2
+    category_id: 'cdf6c9e3-a5a4-4af3-9468-39b9395bc1f3'
+    description: '<p>VaysageTestEqWeightage desc</p>'
+    section_name: 'Topic 1'
+    category_name: 'Science'
+    quest_answers:
+      - name: 'Updated by varsha_2'
+        status: 'Published'
+        answers:
+          - slot: 1
+            answer: 'VJJJ 1'
+            org_id: '884604a2-e7a2-4d18-98dd-684cb37d575c'
+            fraction: 1
+            answer_id: 'cdf4aa03-4764-4c7f-9b7c-99c3b9a07443'
+            ans_format: ''
+            created_at: '2024-05-03T08:25:19.336675+00:00'
+            updated_at: '2024-05-17T10:33:33.240786+00:00'
+            answer_type: 'PLAIN_TEXT'
+            question_id: 'e4fead2e-7f5f-4aad-8382-6ddaf1740759'
+          - slot: 2
+            answer: 'VJJJ2'
+            org_id: '884604a2-e7a2-4d18-98dd-684cb37d575c'
+            fraction: 0
+            answer_id: '441f8c8d-afb0-4898-8de0-d4c307b7499d'
+            ans_format: ''
+            created_at: '2024-05-03T08:25:19.336675+00:00'
+            updated_at: '2024-05-17T10:33:33.240786+00:00'
+            answer_type: 'PLAIN_TEXT'
+            question_id: 'e4fead2e-7f5f-4aad-8382-6ddaf1740759'
+        penalty: 0
+        quiz_id: '88e6453a-0d70-4bfc-af9f-68cc78de3976'
+        question_id: 'e4fead2e-7f5f-4aad-8382-6ddaf1740759'
+        default_mark: 1
+        question_slot: 2
+        question_text: 'Updated by varsha'
+        question_type: 'PLAIN_TEXT'
+    allowed_attempts: 10
+    course_full_name: 'VaytestExpiryUp'
+    num_of_questions: 2
+    course_short_name: 'VaytestExpiry'
+    eq_weightage_marks: 1
+    is_equal_weightage: true
