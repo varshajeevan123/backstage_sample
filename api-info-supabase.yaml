@@ -23,7 +23,7 @@ spec:
               required: true
               schema:
                 type: string
-              description: API key to authorize the request
+              description: API key for accessing the Supabase API
             - in: header
               name: Authorization
               required: true
