@@ -17,6 +17,19 @@ spec:
         post:
           summary: Get category hierarchy for users
           operationId: getCategoryHierarchyForUsers
+          parameters:
+            - in: header
+              name: apikey
+              required: true
+              schema:
+                type: string
+              description: API key to authorize the request
+            - in: header
+              name: Authorization
+              required: true
+              schema:
+                type: string
+              description: Bearer token for authentication
           requestBody:
             required: true
             content:
@@ -58,5 +71,10 @@ spec:
           type: apiKey
           in: header
           name: apikey
+        authorization:
+          type: apiKey
+          in: header
+          name: Authorization
       security:
         - apikey: []
+        - authorization: []
