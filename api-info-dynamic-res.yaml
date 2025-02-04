@@ -23,6 +23,17 @@ spec:
           summary: Get Questions of Quiz
           description: Fetches the questions of a quiz using quiz_id
           operationId: getQuestionsOfQuiz
+          parameters:
+            - name: apikey
+              in: header
+              required: true
+              schema:
+                type: string
+            - name: Authorization
+              in: header
+              required: true
+              schema:
+                type: string
           requestBody:
             required: true
             content:
@@ -56,4 +67,4 @@ spec:
         supabaseAuth:
           type: apiKey
           in: header
-          name: Authorization
+          name: apikey
