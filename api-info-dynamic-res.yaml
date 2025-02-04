@@ -3,13 +3,12 @@ kind: API
 metadata:
   name: supabase-api
   description: API to fetch questions of a quiz using Supabase RPC
-  tags:
-    - supabase
-    - quiz
+  annotations:
+    github.com/project-slug: varshajeevan123/backstage_sample
 spec:
   type: openapi
   lifecycle: production
-  owner: user@example.com
+  owner: varshajeevan123
   definition: |
     openapi: 3.0.0
     info:
