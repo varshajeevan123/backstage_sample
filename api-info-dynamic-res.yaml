@@ -1,49 +1,60 @@
-openapi: 3.0.0
-info:
-  title: Supabase API
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: supabase-api
   description: API to fetch questions of a quiz using Supabase RPC
-  version: 1.0.0
-servers:
-  - url: https://kfpwszxuivydjftikxts.supabase.co/rest/v1
-
-paths:
-  /rpc/get_questions_of_quiz:
-    post:
-      summary: Get Questions of Quiz
-      description: Fetches the questions of a quiz using quiz_id
-      operationId: getQuestionsOfQuiz
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                quiz_id:
-                  type: string
-                  example: "88e6453a-0d70-4bfc-af9f-68cc78de3976"
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
+  tags:
+    - supabase
+    - quiz
+spec:
+  type: openapi
+  lifecycle: production
+  owner: user@example.com
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Supabase API
+      description: API to fetch questions of a quiz using Supabase RPC
+      version: 1.0.0
+    servers:
+      - url: https://kfpwszxuivydjftikxts.supabase.co/rest/v1
+    paths:
+      /rpc/get_questions_of_quiz:
+        post:
+          summary: Get Questions of Quiz
+          description: Fetches the questions of a quiz using quiz_id
+          operationId: getQuestionsOfQuiz
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
                   type: object
                   properties:
-                    question_id:
+                    quiz_id:
                       type: string
-                    question_text:
-                      type: string
-        '401':
-          description: Unauthorized
-      security:
-        - supabaseAuth: []
-
-components:
-  securitySchemes:
-    supabaseAuth:
-      type: apiKey
-      in: header
-      name: Authorization
+                      example: "88e6453a-0d70-4bfc-af9f-68cc78de3976"
+          responses:
+            '200':
+              description: Successful response
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        question_id:
+                          type: string
+                        question_text:
+                          type: string
+            '401':
+              description: Unauthorized
+          security:
+            - supabaseAuth: []
+    components:
+      securitySchemes:
+        supabaseAuth:
+          type: apiKey
+          in: header
+          name: Authorization
