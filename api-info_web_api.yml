@@ -1,48 +1,60 @@
-openapi: 3.0.0
-info:
-  title: JSONPlaceholder API
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: jsonplaceholder-api
   description: A sample API to test POST requests.
-  version: 1.0.0
+  tags:
+    - public
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-name
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: JSONPlaceholder API
+      description: A sample API to test POST requests.
+      version: 1.0.0
 
-servers:
-  - url: https://jsonplaceholder.typicode.com
+    servers:
+      - url: https://jsonplaceholder.typicode.com
 
-paths:
-  /posts:
-    post:
-      summary: Create a new post
-      description: Sends a POST request to create a test post.
-      operationId: createPost
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  example: "Test Post"
-                body:
-                  type: string
-                  example: "This is a test post."
-                userId:
-                  type: integer
-                  example: 1
-      responses:
-        '201':
-          description: Successfully created post
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  title:
-                    type: string
-                  body:
-                    type: string
-                  userId:
-                    type: integer
-                  id:
-                    type: integer
-                    example: 101
+    paths:
+      /posts:
+        post:
+          summary: Create a new post
+          description: Sends a POST request to create a test post.
+          operationId: createPost
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      example: "Test Post"
+                    body:
+                      type: string
+                      example: "This is a test post."
+                    userId:
+                      type: integer
+                      example: 1
+          responses:
+            '201':
+              description: Successfully created post
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      title:
+                        type: string
+                      body:
+                        type: string
+                      userId:
+                        type: integer
+                      id:
+                        type: integer
+                        example: 101
